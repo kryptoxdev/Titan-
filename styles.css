@@ -1,0 +1,13 @@
+.bodyColours {
+	background-color:#e1e1f4;
+	color:#050316;
+}
+
+.minSize {
+	min-width: 280px;
+}
+
+.btn-primary, .form-check-input:checked {
+	background-color: #2f27ce !important;
+	border: none !important;
+}

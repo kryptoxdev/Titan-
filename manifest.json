@@ -1,0 +1,24 @@
+{
+	"manifest_version": 3,
+	"name": "Titan+",
+	"description": "Fixing Titans problems because they won't!",
+	"version": "0.1.2",
+	"content_scripts": [
+		{
+		"matches": [
+			"http://localhost/*"
+		],
+		"js": ["scripts/redColourFix.js", "scripts/processCounter.js"],
+		"run_at": "document_start"
+		}
+	],
+	"icons": {
+		"16": "images/icon-16.png",
+		"32": "images/icon-32.png",
+		"48": "images/icon-48.png",
+		"128": "images/icon-128.png"
+	},
+	"action": {
+	  "default_popup": "TitanPlus.html"
+	}
+  }
