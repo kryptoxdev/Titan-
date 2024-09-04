@@ -8,8 +8,7 @@
 		"matches": [
 			"http://localhost/*"
 		],
-		"js": ["scripts/redColourFix.js", "scripts/processCounter.js"],
-		"run_at": "document_start"
+		"js": ["scripts/redColourFix.js", "scripts/processCounter.js"]
 		}
 	],
 	"icons": {
