@@ -8,7 +8,8 @@
 		"matches": [
 			"http://localhost/*"
 		],
-		"js": ["scripts/redColourFix.js", "scripts/processCounter.js"]
+		"js": ["scripts/redColourFix.js", "scripts/processCounter.js"],
+		"css": ["switchBezelsRear.css"]
 		}
 	],
 	"icons": {

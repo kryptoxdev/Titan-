@@ -30,6 +30,4 @@ popup._onLinkClicked = function (event) {
 	}
 }
 
-console.log(localStorage.getItem('processKey'));
-
 openTitanElement.addEventListener('mouseup', popup._onLinkClicked);
