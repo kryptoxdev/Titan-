@@ -11,7 +11,7 @@
 		"matches": [
 			"http://localhost/*"
 		],
-		"js": ["scripts/redColourFix.js", "scripts/settings.js", "scripts/processCounter.js", "scripts/switchBezelRear.js"]
+		"js": ["scripts/redColourFix.js", "scripts/settings.js", "scripts/switchBezelRear.js"]
 		
 		}
 	],

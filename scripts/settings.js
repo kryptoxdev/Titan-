@@ -6,9 +6,8 @@ function switchBezelRearSettings() {
 	switchBezelRear();
 }
 
-chrome.storage.sync.get(['redColourFix', 'processedCounter', 'switchBezelRear'], function (result) {
+chrome.storage.sync.get(['redColourFix', 'switchBezelRear'], function (result) {
 	const redColourFix = result.redColourFix;
-	const processedCounter = result.processedCounter;
 	const switchBezelRear = result.switchBezelRear;
 	
 	if (redColourFix) {
