@@ -1,16 +1,21 @@
-const settingsGroup = ['redColourFix', 'processedCounter', 'switchBezelRear'];
+function redColourFixSettings() {
+	redColourFix();
+}
 
-settingsGroup.forEach(setting => {
-	console.log(localStorage.getItem(setting));
-	if (localStorage.getItem(setting) === 'true') {
-		if (setting === 'redColourFix') {
-			redColourFix();
-		} else if (setting === 'processedCounter') {
-			// Call processedCounter function
-		} else if (setting === 'switchBezelRear') {
-			switchBezelRear();
-		} else {
-			console.log('All settings disabled');
-		}
+function switchBezelRearSettings() {
+	switchBezelRear();
+}
+
+chrome.storage.sync.get(['redColourFix', 'processedCounter', 'switchBezelRear'], function (result) {
+	const redColourFix = result.redColourFix;
+	const processedCounter = result.processedCounter;
+	const switchBezelRear = result.switchBezelRear;
+	
+	if (redColourFix) {
+		redColourFixSettings();
 	}
-})
+	
+	if (switchBezelRear) {
+		switchBezelRearSettings();
+	} 
+});

@@ -6,24 +6,22 @@ let openTitanElement = document.querySelector('button');
 let settingsOwner = document.getElementById('settings');
 let settingsGroup = settingsOwner.querySelectorAll('input');
 
-settingsGroup.forEach(input => {
-	var savedState = localStorage.getItem(input.id);
-	console.log(savedState);
-	if (savedState === 'true') {
-		input.setAttribute('checked', 'checked');
-	} else {
-		input.removeAttribute('checked');
-	}
+chrome.storage.sync.get(['redColourFix', 'processedCounter', 'switchBezelRear'], function (result) {
+	settingsGroup.forEach(setting => {
+		setting.checked = result[setting.id] || false;
+	});
 });
 
-settingsOwner.addEventListener('change', function(event) {
-	settingsGroup.forEach(input => {
-		localStorage.setItem(`${input.id}`, input.checked);
+settingsOwner.addEventListener('change', function (event) {
+	const settingName = event.target.id;
+	const settingValue = event.target.checked;
+	chrome.storage.sync.set({ [settingName]: settingValue }, function () {
+		console.log('Setting saved:', settingName, settingValue);
 	});
 });
 
 popup._onLinkClicked = function (event) {
-	if(event.button === 0 || event.button === 1) {
+	if (event.button === 0 || event.button === 1) {
 		chrome.tabs.create({
 			'url': 'https://titan.webuyanyphone.com',
 			'active': (event.button === 0)
