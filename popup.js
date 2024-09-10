@@ -8,6 +8,7 @@ let settingsGroup = settingsOwner.querySelectorAll('input');
 
 settingsGroup.forEach(input => {
 	var savedState = localStorage.getItem(input.id);
+	console.log(savedState);
 	if (savedState === 'true') {
 		input.setAttribute('checked', 'checked');
 	} else {
