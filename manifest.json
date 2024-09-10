@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "Titan+",
 	"description": "Fixing Titans problems because they won't!",
-	"version": "0.1.2",
+	"version": "0.2.0",
 	"permissions": [
 		"storage"
 	],
