@@ -17,7 +17,7 @@ chrome.storage.sync.get(['redColourFix', 'processedCounter', 'switchBezelRear'],
 	const processedCounter = result.processedCounter;
 	const switchBezelRear = result.switchBezelRear;
 	
-	if (currentUrl == "http://localhost:3000/phonecheck") {
+	if (currentUrl.startsWith("http://localhost:3000/phonecheck")) {
 		if (redColourFix) {
 			redColourFixSettings();
 		}
