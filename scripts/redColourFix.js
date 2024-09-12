@@ -1,9 +1,8 @@
 const dropdown = document.querySelector("select[id='colourSelect']");
-const colourText = Array.from(document.querySelectorAll('div'))
-		.find(el => el.textContent === 'product(red)');
+const colourText = document.querySelector("#dataInput > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > div > p");
 
 function redColourFix() {
-	if (colourText) {
+	if (colourText.innerHTML.includes('product(red)')) {
 		dropdown.value = 'Red';
 	}
 }
