@@ -1,5 +1,5 @@
 function redColourFixSettings() {
-	redColourFix();
+	debouncedRedColourFix();
 }
 
 function switchBezelRearSettings() {
