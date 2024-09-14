@@ -34,9 +34,9 @@ chrome.storage.sync.get(['redColourFix', 'processedCounter', 'switchBezelRear', 
 		if (gradeNameChange) {
 			gradeNameChangeSettings();
 		}
-	}
-	
-	if (processedCounter) {
-		processCounterSettings();
+		
+		if (processedCounter) {
+			processCounterSettings();
+		}
 	}
 });

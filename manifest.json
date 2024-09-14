@@ -9,11 +9,11 @@
 	"content_scripts": [
 	  {
 		"matches": ["http://localhost/*"],
-		"js": ["scripts/settings.js", "scripts/processCounter.js"]
+		"js": ["scripts/settings.js"]
 	  },
 	  {
 		"matches": ["http://localhost/phonecheck"],
-		"js": ["scripts/redColourFix.js", "scripts/switchBezelRear.js", "scripts/gradeNameChange.js"]
+		"js": ["scripts/redColourFix.js", "scripts/switchBezelRear.js", "scripts/gradeNameChange.js", "scripts/processCounter.js"]
 	  }
 	],
 	"icons": {
