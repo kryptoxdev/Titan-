@@ -6,7 +6,7 @@ let openTitanElement = document.querySelector('button');
 let settingsOwner = document.getElementById('settings');
 let settingsGroup = settingsOwner.querySelectorAll('input');
 
-chrome.storage.sync.get(['redColourFix', 'processedCounter', 'switchBezelRear'], function (result) {
+chrome.storage.sync.get(['redColourFix', 'processedCounter', 'switchBezelRear', 'gradeNameChange'], function (result) {
 	settingsGroup.forEach(setting => {
 		setting.checked = result[setting.id] || false;
 	});

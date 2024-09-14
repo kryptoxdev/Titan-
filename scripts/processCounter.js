@@ -22,3 +22,17 @@ function processCounter() {
 		});
 	}
 }
+
+function processCounter() {
+	let processForm = document.querySelector("#dataInput");
+	
+	processForm.addEventListener('submit', (event) => {
+		let deviceIMEI = document.querySelector("#imei");
+		
+		chrome.storage.sync.get([])
+		
+		chrome.storage.sync.set({   }, function () {
+		
+		});
+	});
+}
