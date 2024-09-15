@@ -3,11 +3,21 @@
 	color:#050316;
 }
 
+.numberContainer {
+	background-color: #acaccf;
+	width: 250px;
+	
+}
+
 .minSize {
-	min-width: 280px;
+	min-width: 320px;
 }
 
 .btn-primary, .form-check-input:checked {
 	background-color: #2f27ce !important;
 	border: none !important;
+}
+
+.btn-danger {
+	background-color: #DC143C !important ;
 }
