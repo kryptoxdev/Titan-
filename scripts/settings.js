@@ -7,7 +7,7 @@ function handleSettings(setting, functionName) {
 }
 
 chrome.storage.sync.get(['redColourFix', 'processedCounter', 'switchBezelRear', 'gradeNameChange'], (result) => {
-	if (currentUrl.startsWith("http://localhost:3000/phonecheck")) {
+	if (currentUrl.startsWith("https://titan.webuyanyphone.com/tradeinproduct")) {
 		handleSettings(result.redColourFix, redColourFix);
 		handleSettings(result.processedCounter, processCounter);
 		handleSettings(result.switchBezelRear, switchBezelRear);

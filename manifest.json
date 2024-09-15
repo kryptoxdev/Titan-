@@ -8,11 +8,11 @@
 	],
 	"content_scripts": [
 		{
-			"matches": ["http://localhost/*"],
+			"matches": ["https://titan.webuyanyphone.com/*"],
 			"js": ["scripts/settings.js"]
 		},
 		{
-			"matches": ["http://localhost/phonecheck"],
+			"matches": ["https://titan.webuyanyphone.com/tradeinproduct/*"],
 			"js": ["scripts/redColourFix.js", "scripts/switchBezelRear.js", "scripts/gradeNameChange.js", "scripts/processCounter.js"]
 		}
 	],

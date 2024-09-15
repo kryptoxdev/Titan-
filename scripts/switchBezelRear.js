@@ -1,12 +1,12 @@
 function switchBezelRear() {
-	let rearGroup = document.querySelector("#rearRow");
-	let bezelGroup = document.querySelector("#bezelRow");
+	let rearGroup = document.querySelector("#rearRow"); // Copy JS path to rear housing group
+	let bezelGroup = document.querySelector("#bezelRow"); // Copy JS path to bezel group
 
 	rearGroup.style.position = "relative";
 	bezelGroup.style.position = "relative";
 
-	rearGroup.style.top = "54px";
-	bezelGroup.style.top = "-54px";
+	rearGroup.style.top = "72px";
+	bezelGroup.style.top = "-72px";
 }
 
 const observer = new MutationObserver((mutations) => {

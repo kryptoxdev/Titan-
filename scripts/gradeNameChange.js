@@ -1,4 +1,5 @@
 const conditionLabels = document.querySelector("#dataInput > div:nth-child(5)").querySelectorAll("label");
+//Change first query selector to parent of all buttons
 
 function gradeNameChange() {
 	conditionLabels.forEach(label => {
