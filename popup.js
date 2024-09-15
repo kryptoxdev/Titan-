@@ -42,9 +42,11 @@ chrome.storage.sync.get(['processedCounter'], (result) => {
 	if (result.processedCounter) {
 		processNumbersDiv.classList.add('numberContainer', 'py-2');
 		btnGroup.classList.remove('fixed-bottom');
+		resetCounterButton.hidden = false;
 	} else {
 		processNumbersDiv.classList.remove('numberContainer', 'py-2');
 		btnGroup.classList.add('fixed-bottom');
+		resetCounterButton.hidden = true;
 	}
 });
 
