@@ -2,9 +2,13 @@
 
 let popup = {};
 
+let btnGroup = document.querySelector("#btnGroup");
 let openTitanButton = document.querySelector("button[id='openTitanLink']");
 let resetCounterButton = document.querySelector("button[id='resetCounter']");
+let processCounterSwitch = document.querySelector("#processedCounter");
 
+let processNumbersDiv = document.getElementById("processNumbers");
+let processDivChildren = processNumbersDiv.querySelectorAll("*");
 let currentCount = document.getElementById("currentCount");
 let lastCount = document.getElementById("lastCount");
 
@@ -30,15 +34,33 @@ chrome.storage.sync.get(["processCount", "lastCount"], (result) => {
 	lastCount.textContent = result.lastCount || 0;
 });
 
+chrome.storage.sync.get(['processedCounter'], (result) => {
+	processDivChildren.forEach((element) => {
+		element.hidden = !result.processedCounter;
+	});
+
+	if (result.processedCounter) {
+		processNumbersDiv.classList.add('numberContainer', 'py-2');
+		btnGroup.classList.remove('fixed-bottom');
+	} else {
+		processNumbersDiv.classList.remove('numberContainer', 'py-2');
+		btnGroup.classList.add('fixed-bottom');
+	}
+});
+
 chrome.storage.sync.onChanged.addListener((changes) => {
 	if (changes.processCount) {
 		currentCount.textContent = changes.processCount.newValue || 0;
 	}
 });
 
+processCounterSwitch.addEventListener("click", () => {
+	location.reload();
+})
+
 resetCounterButton.addEventListener("click", () => {
 	chrome.storage.sync.set({ processCount: 0, lastCount: currentCount.textContent });
-	
+
 	location.reload();
 });
 
