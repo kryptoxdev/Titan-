@@ -1,4 +1,4 @@
-const conditionLabels = document.querySelectorAll('label');
+const conditionLabels = document.querySelector("#dataInput > div:nth-child(5)").querySelectorAll("label");
 
 function gradeNameChange() {
 	conditionLabels.forEach(label => {
