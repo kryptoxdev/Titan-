@@ -17,5 +17,5 @@ const observer = new MutationObserver((mutations) => {
 	});
 });
 
-observer.observe(document.querySelector("#conditions > div > div.bg-white.overflow-hidden.sm\\:rounded-md > ul > li:nth-child(2) > div > div"), { attributes: true, attributeFilter: ['style'] });
-observer.observe(document.querySelector("#conditions > div > div.bg-white.overflow-hidden.sm\\:rounded-md > ul > li:nth-child(3) > div > div"), { attributes: true, attributeFilter: ['style'] });
+observer.observe(rearGroup), { attributes: true, attributeFilter: ['style'] });
+observer.observe(bezelGroup), { attributes: true, attributeFilter: ['style'] });

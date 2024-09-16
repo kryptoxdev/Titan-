@@ -24,3 +24,16 @@ function gradeNameChange() {
 	})
 	}, 400);
 }
+
+const gradeNameObserver = new MutationObserver((mutations) => {
+	mutations.forEach((mutation) => {
+		console.log(mutation.type);
+		if (mutation.type === 'childList') {
+			gradeNameChange();
+		}
+	});
+});
+
+conditionLabels.forEach(label => {
+	gradeNameObserver.observe(label, { characterData: false, attributes: false, childList: true, subtree: false });
+});
