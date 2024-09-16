@@ -1,8 +1,8 @@
 function processCounter() {
-	let processForm = document.querySelector("#dataInput"); //Change to process form ID, or copy JS path
+	let processForm = document.querySelector("#main_section > div > form"); //Change to process form ID, or copy JS path
 
 	processForm.addEventListener('submit', (event) => {
-		let deviceIMEI = document.querySelector("#imei").value; //Change to IMEI input box ID, or copy JS path
+		let deviceIMEI = document.querySelector("#imei-checker > div.bg-white.overflow-hidden.sm\\:rounded-md.divide-y.divide-gray-200 > div > div > div.mt-4.shrink-0.sm\\:mt-0.sm\\:ml-5.w-1\\/2 > div > div > input").value; //Change to IMEI input box ID, or copy JS path
 
 		chrome.storage.sync.get(['deviceIMEIs', 'processCount'], (result) => {
 			let imeiList = result.deviceIMEIs || [];
