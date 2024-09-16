@@ -17,5 +17,5 @@ const observer = new MutationObserver((mutations) => {
 	});
 });
 
-observer.observe(rearGroup), { attributes: true, attributeFilter: ['style'] });
-observer.observe(bezelGroup), { attributes: true, attributeFilter: ['style'] });
+observer.observe(rearGroup, { attributes: true, attributeFilter: ['style'] });
+observer.observe(bezelGroup, { attributes: true, attributeFilter: ['style'] });
