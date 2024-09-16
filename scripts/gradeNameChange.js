@@ -1,8 +1,10 @@
 const conditionLabels = document.querySelector("#dataInput > div:nth-child(5)").querySelectorAll("label");
 
+let gradeNameTimeout;
+
 function gradeNameChange() {
 	conditionLabels.forEach(label => {
-		const textContent = label.textContent.trim();
+		var textContent = label.textContent.trim();
 		switch (textContent) {
 			case 'None':
 				label.textContent = 'A+';
@@ -18,3 +20,16 @@ function gradeNameChange() {
 		}
 	})
 }
+
+const gradeNameObserver = new MutationObserver((mutations) => {
+	mutations.forEach((mutation) => {
+		console.log(mutation.type);
+		if (mutation.type === 'childList') {
+			gradeNameChange();
+		}
+	});
+});
+
+conditionLabels.forEach(label => {
+	gradeNameObserver.observe(label, { characterData: false, attributes: false, childList: true, subtree: false });
+});
