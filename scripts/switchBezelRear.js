@@ -1,6 +1,6 @@
 function switchBezelRear() {
-	let rearGroup = document.querySelector("#rearRow"); // Copy JS path to rear housing group
-	let bezelGroup = document.querySelector("#bezelRow"); // Copy JS path to bezel group
+	let rearGroup = document.querySelector("#conditions > div > div.bg-white.overflow-hidden.sm\\:rounded-md > ul > li:nth-child(2) > div > div");
+	let bezelGroup = document.querySelector("#conditions > div > div.bg-white.overflow-hidden.sm\\:rounded-md > ul > li:nth-child(3) > div > div");
 
 	rearGroup.style.position = "relative";
 	bezelGroup.style.position = "relative";
@@ -17,5 +17,5 @@ const observer = new MutationObserver((mutations) => {
 	});
 });
 
-observer.observe(document.querySelector('#rearRow'), { attributes: true, attributeFilter: ['style'] });
-observer.observe(document.querySelector('#bezelRow'), { attributes: true, attributeFilter: ['style'] });
+observer.observe(document.querySelector("#conditions > div > div.bg-white.overflow-hidden.sm\\:rounded-md > ul > li:nth-child(2) > div > div"), { attributes: true, attributeFilter: ['style'] });
+observer.observe(document.querySelector("#conditions > div > div.bg-white.overflow-hidden.sm\\:rounded-md > ul > li:nth-child(3) > div > div"), { attributes: true, attributeFilter: ['style'] });

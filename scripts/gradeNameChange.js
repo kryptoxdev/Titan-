@@ -1,8 +1,12 @@
-const conditionLabels = document.querySelector("#conditions > div > div.bg-white.overflow-hidden.sm\\:rounded-md > ul").querySelectorAll("label");
-//Change first query selector to parent of all buttons
+const conditionLabels = document.querySelector("#conditions > div > div.bg-white.overflow-hidden.sm\\:rounded-md > ul").querySelectorAll("span");
+
+let timeout2;
 
 function gradeNameChange() {
-	conditionLabels.forEach(label => {
+	clearTimeout(timeout2);
+	
+	timeout2 = setTimeout(() => {
+		conditionLabels.forEach(label => {
 		const textContent = label.textContent.trim();
 		switch (textContent) {
 			case 'None':
@@ -18,4 +22,5 @@ function gradeNameChange() {
 				label.textContent = 'C';
 		}
 	})
+	}, 400);
 }
