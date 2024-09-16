@@ -1,4 +1,4 @@
-const conditionLabels = document.querySelector("#dataInput > div:nth-child(5)").querySelectorAll("label");
+const conditionLabels = document.querySelector("#conditions > div > div.bg-white.overflow-hidden.sm\\:rounded-md > ul").querySelectorAll("label");
 //Change first query selector to parent of all buttons
 
 function gradeNameChange() {
