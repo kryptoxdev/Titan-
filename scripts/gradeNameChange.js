@@ -1,11 +1,11 @@
 const conditionLabels = document.querySelector("#conditions > div > div.bg-white.overflow-hidden.sm\\:rounded-md > ul").querySelectorAll("span");
 
-let timeout2;
+let gradeNameTimeout;
 
 function gradeNameChange() {
-	clearTimeout(timeout2);
+	clearTimeout(gradeNameTimeout);
 	
-	timeout2 = setTimeout(() => {
+	gradeNameTimeout = setTimeout(() => {
 		conditionLabels.forEach(label => {
 		const textContent = label.textContent.trim();
 		switch (textContent) {
