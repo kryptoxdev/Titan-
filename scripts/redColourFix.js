@@ -1,6 +1,6 @@
-const dropdown = document.querySelector("select[id='colourSelect']"); //Copy JS path for the colour select
-const colourText = document.querySelector("#dataInput > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > div > p"); //Copy JS path for colour subtext
-const buttons = Array.from(document.querySelectorAll("input[class='btn-check']")); //Change class to match buttons or something on those lines
+const dropdown = document.querySelector("#testing_color > div > div > div.mt-4.shrink-0.sm\\:mt-0.sm\\:ml-5.w-1\\/2 > div > select"); //Copy JS path for the colour select
+const colourText = document.querySelector("#testing_color > div > div > div.truncate > div.mt-2.flex > div > p"); //Copy JS path for colour subtext
+const buttons = Array.from(document.querySelectorAll("input[class='button']")); //Change class to match buttons or something on those lines
 
 let timeout;
 
