@@ -23,7 +23,6 @@ function gradeNameChange() {
 
 const gradeNameObserver = new MutationObserver((mutations) => {
 	mutations.forEach((mutation) => {
-		console.log(mutation.type);
 		if (mutation.type === 'childList') {
 			gradeNameChange();
 		}
