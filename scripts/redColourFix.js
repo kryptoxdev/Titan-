@@ -5,14 +5,13 @@ const buttons = Array.from(document.querySelectorAll("input[class='button']"));
 let timeout;
 
 function redColourFix() {
-	clearTimeout(timeout);
-
-	timeout = setTimeout(() => {
-		if (colourText.textContent.toLowerCase().includes('(product)red')) {
+	timeout = setInterval(() => {
+		if (colourText.textContent.toLowerCase().includes('red')) {
 			dropdown.value = 'red';
 		}
 	}, 750);
 }
 
-dropdown.addEventListener('change', redColourFix);
-buttons.forEach(button => button.addEventListener('click', redColourFix));
+dropdown.addEventListener('change', () => {
+	clearTimeout(timeout);
+})
