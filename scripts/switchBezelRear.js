@@ -1,6 +1,6 @@
 function switchBezelRear() {
-	let rearGroup = document.querySelector("#rearRow");
-	let bezelGroup = document.querySelector("#bezelRow");
+	let rearGroup = document.querySelector("#rearHousing");
+	let bezelGroup = document.querySelector("#bezels");
 
 	rearGroup.style.position = "relative";
 	bezelGroup.style.position = "relative";
@@ -17,5 +17,5 @@ const observer = new MutationObserver((mutations) => {
 	});
 });
 
-observer.observe(rearGroup, { attributes: true, attributeFilter: ['style'] });
-observer.observe(bezelGroup, { attributes: true, attributeFilter: ['style'] });
+observer.observe(document.querySelector("#rearHousing"), { attributes: true, attributeFilter: ['style'] });
+observer.observe(document.querySelector("#bezels"), { attributes: true, attributeFilter: ['style'] });
