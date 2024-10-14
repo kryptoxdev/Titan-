@@ -1,23 +1,53 @@
 .bodyColours {
-	background-color:#e1e1f4;
-	color:#050316;
+	background-color: #e1e1f4;
+	color: #050316;
 }
 
 .numberContainer {
 	background-color: #acaccf;
 	width: 250px;
-	
+
 }
 
 .minSize {
 	min-width: 320px;
 }
 
-.btn-primary, .form-check-input:checked {
+.btn-primary,
+.form-check-input:checked {
 	background-color: #2f27ce !important;
 	border: none !important;
 }
 
 .btn-danger {
-	background-color: #DC143C !important ;
+	background-color: #DC143C !important;
+}
+
+.editable-count {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	width: 100px;
+	appearance: none;
+}
+
+.editable-count:focus {
+	background-color: #9999cc;
+	outline: none;
+	width: 100px;
+	appearance: none;
+	/* Adjust the width as needed */
+}
+
+.vr {
+	height: 100%;
+	/* Adjust the height as needed */
+	border: 1px solid #000000;
+	/* Adjust the border style as needed */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
