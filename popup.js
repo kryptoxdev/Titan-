@@ -30,9 +30,32 @@ settingsOwner.addEventListener('change', function (event) {
 });
 
 chrome.storage.sync.get(["processCount", "lastCount"], (result) => {
-	currentCount.textContent = result.processCount || 0;
-	lastCount.textContent = result.lastCount || 0;
+	currentCount.value = result.processCount || 0;
+	lastCount.value = result.lastCount || 0;
 });
+
+lastCount.addEventListener("keydown", function (event) {
+	if (event.key === "Enter") {
+		event.preventDefault();
+		lastCount.blur();
+	}
+});
+
+lastCount.addEventListener("blur", function() {
+	chrome.storage.sync.set({ lastCount: lastCount.value });
+})
+
+currentCount.addEventListener("keydown", function (event) {
+	if (event.key === "Enter") {
+		event.preventDefault();
+		currentCount.blur();
+	}
+});
+
+currentCount.addEventListener("blur", function() {
+	chrome.storage.sync.set({ processCount: currentCount.value });
+})
+
 
 chrome.storage.sync.get(['processedCounter'], (result) => {
 	processDivChildren.forEach((element) => {
@@ -61,7 +84,7 @@ processCounterSwitch.addEventListener("click", () => {
 })
 
 resetCounterButton.addEventListener("click", () => {
-	chrome.storage.sync.set({ processCount: 0, lastCount: currentCount.textContent });
+	chrome.storage.sync.set({ processCount: 0, lastCount: currentCount.value });
 
 	location.reload();
 });
