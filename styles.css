@@ -1,26 +1,75 @@
-.bodyColours {
-	background-color: #e1e1f4;
-	color: #050316;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+	--text: #e3f4fc;
+	--background: #021016;
+	--primary: #7bc8f3;
+	--secondary: #3c0fa0;
+	--accent: #a431ec;
 }
 
-.numberContainer {
-	background-color: #acaccf;
-	width: 250px;
-
+body {
+	background-color: var(--background);
+	color: #e3f4fc;
 }
 
 .minSize {
-	min-width: 320px;
+	width: 320px;
 }
 
-.btn-primary,
+.roboto {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.roboto-bold {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+.btnPrimary {
+	color: var(--text);
+	background-color: #1a2026;
+	border: none;
+	font-size: 12px;
+	border-radius: 0px;
+}
+
 .form-check-input:checked {
-	background-color: #2f27ce !important;
-	border: none !important;
+	background-color: #7bc8f3;
+	border: none;
 }
 
-.btn-danger {
-	background-color: #DC143C !important;
+.counter {
+	width: 250px;
+	color: black;
+	background-color: #7bc8f3;
+}
+
+.counterButton {
+	width:75px;
+	height:25px;
+	color: black;
+	background-color: #5299c3;
+	border: none;
+	font-size: 0.8em;
+}
+
+.counterButton:hover {
+	color: black;
+	background-color: #46a2d4;
+}
+
+.counterButton:focus {
+	background-color: #4488b3;
+}
+
+.resetImage {
+	width: 16px;
+	height: 16px;
 }
 
 .editable-count {
@@ -32,7 +81,7 @@
 }
 
 .editable-count:focus {
-	background-color: #9999cc;
+	background-color: #67a8d3;
 	outline: none;
 	width: 100px;
 	appearance: none;
@@ -41,9 +90,47 @@
 
 .vr {
 	height: 100%;
-	/* Adjust the height as needed */
 	border: 1px solid #000000;
-	/* Adjust the border style as needed */
+}
+
+.counterHeader {
+	margin-bottom: -10px;
+	z-index: 2;
+	width: 250px;
+	color: black;
+	background-color: #7bc8f3;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+}
+
+.footerImg {
+	filter: grayscale(100%);
+	width: 24px;
+	height: 24px;
+}
+
+.btnPrimary:focus {
+	background-color: #1a2026;
+	color: #7bc8f3;
+}
+
+.btnPrimary.selected {
+	color: #7bc8f3;
+}
+
+.footerImg.selected {
+	filter: grayscale(0);
+}
+
+.btnPrimary:hover {
+	background-color: #22282c;
+}
+
+.btnPrimary:focus img.footerImg {
+	filter: grayscale(0);
 }
 
 input::-webkit-outer-spin-button,

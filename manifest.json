@@ -1,19 +1,22 @@
 {
 	"manifest_version": 3,
 	"name": "Titan+",
-	"description": "Fixing Titans problems because they won't!",
-	"version": "0.6.9",
+	"description": "Adds counters, tweaks, and fixed to Titan.",
+	"version": "0.1",
 	"permissions": [
 		"storage"
 	],
+	"action": {
+		"default_popup": "pages/counters.html"
+	},
 	"content_scripts": [
 		{
-			"matches": ["http://localhost/*"],
+			"matches": ["https://titan.webuyanyphone.com/*"],
 			"js": ["scripts/settings.js"]
 		},
 		{
-			"matches": ["http://localhost/phonecheck"],
-			"js": ["scripts/redColourFix.js", "scripts/switchBezelRear.js", "scripts/gradeNameChange.js", "scripts/processCounter.js"]
+			"matches": ["https://titan.webuyanyphone.com/tradeinproduct/*"],
+			"js": ["scripts/salesforceCounter.js", "scripts/processCounter.js", "scripts/switchBezelRear.js"]
 		}
 	],
 	"icons": {
@@ -21,8 +24,5 @@
 		"32": "images/icon-32.png",
 		"48": "images/icon-48.png",
 		"128": "images/icon-128.png"
-	},
-	"action": {
-		"default_popup": "TitanPlus.html"
 	}
 }
