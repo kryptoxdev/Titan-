@@ -4,7 +4,7 @@ if (window.location.href.includes('tweaks')) {
 
 	console.log(settingsGroup);
 	
-	chrome.storage.sync.get(['switchBezelRear'], function (result) {
+	chrome.storage.sync.get(['switchBezelRear', 'trackVideoUploads'], function (result) {
 		settingsGroup.forEach(setting => {
 			setting.checked = result[setting.id] || false;
 		});

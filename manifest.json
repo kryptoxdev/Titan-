@@ -4,10 +4,14 @@
 	"description": "Adds counters, tweaks, and fixed to Titan.",
 	"version": "0.1",
 	"permissions": [
+		"activeTab",
 		"storage"
 	],
 	"action": {
 		"default_popup": "pages/counters.html"
+	},
+	"background": {
+		"service_worker": "scripts/background.js"	
 	},
 	"content_scripts": [
 		{
@@ -16,7 +20,7 @@
 		},
 		{
 			"matches": ["https://titan.webuyanyphone.com/tradeinproduct/*"],
-			"js": ["scripts/salesforceCounter.js", "scripts/processCounter.js", "scripts/switchBezelRear.js"]
+			"js": ["scripts/salesforceCounter.js", "scripts/processCounter.js", "scripts/switchBezelRear.js", "scripts/trackVideoUploads.js"]
 		}
 	],
 	"icons": {
