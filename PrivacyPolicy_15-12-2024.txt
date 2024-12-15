@@ -1,0 +1,35 @@
+Titan+ Privacy Policy
+Effective Date: 15/12/2024
+This Privacy Policy explains how Titan+ collects, uses, and discloses information through the chrome extension.
+
+Information We Collect
+ IMEI:
+* Titan+ temporarily stores the IMEI number of scanned products on Titan (limited to the current session).
+* Titan+ also stores a list of up to 5 recently "processed" IMEIs locally on your device to track the number of devices processed within Titan.
+* The scanned IMEI is used to check if a product's video upload status needs to be displayed on Titan. Titan+ does not transmit this data or the video upload status to any remote servers.
+ User-defined Counter Values: 
+* Titan+ stores user-defined counter values through Chrome's storage.sync API. These values are specific to the Titan+ extension and are not used for any other purpose.
+ 
+How We Use Your Information
+ Website Data:
+* The extension may access and process information related to your use of specific pages on Titan with the extension active. This could include product information, trade-in values, or other content specific to your interaction with the Titan website. This information is used solely to provide the extension's functionalities within Titan.
+    IMEI:
+* The scanned IMEI is used to update the video upload status for the corresponding product within the Titan website (on the same tab).
+* The list of recently processed IMEIs is used internally to track the number of devices a user has processed or salesforced within Titan.
+* User-defined Counter Values are used to maintain the state of your counters within the extension.
+ 
+Data Storage
+Chrome's storage API:
+* Chrome's storage.sync: Stores user-defined counter values (no size limit specified by Chrome, but there is an approximate quota of 100 KB). Stores a list of up to 5 recently processed IMEIs.
+*  Chrome's storage.local: Temporarily stores the IMEI of the scanned product during the current browser session.
+*  Chrome's sessionStorage: Temporarily stores the selected button state within the extension's popup window in order to navigate the extension. This data is lost when you close the popup or your browser window.
+ 
+Your Rights
+* You can control how Titan+ accesses website data by disabling the extension in Chrome and disabling certain features within the extension
+* You can clear Titan+ storage data through Chrome's settings menu (this will clear user-defined counter values and the list of recently processed IMEIs).
+ 
+Data Security
+* We do not collect any personal information through the extension. The limited data stored locally on your device is not accessible to us and can be cleared at any point.
+ 
+Changes to This Privacy Policy
+* We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy at this website. 
