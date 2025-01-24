@@ -7,7 +7,7 @@ function handleSettings(setting, functionName) {
 }
 
 chrome.storage.sync.get(['switchBezelRear', 'trackVideoUploads'], (result) => {
-	if (!currentUrl.includes("/image_upload/")) {
+	if (!currentUrl.includes("/image_upload")) {
 		handleSettings(result.switchBezelRear, switchBezelRear);
 	}
 	
