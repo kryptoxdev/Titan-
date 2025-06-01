@@ -1,5 +1,15 @@
 if (window.location.href.includes('/retest/')) {
-	let salesforceButton = document.querySelector("#dataInput > button");
+	
+	function findSalesforceButton() {
+        const buttons = document.querySelectorAll('button');
+        for (const button of buttons) {
+            if (button.textContent.trim().toLowerCase().includes('process') && !button.disabled) {
+			};
+        }
+        return document.querySelector("#process_button");
+    }
+
+	let salesforceButton = findSalesforceButton();
 
 	salesforceButton.addEventListener('click', (event) => {
 		let deviceIMEI = document.querySelector("#imei").value;

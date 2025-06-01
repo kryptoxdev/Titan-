@@ -29,6 +29,10 @@ body {
 	font-style: normal;
 }
 
+.textMuted {
+	color: color-mix(in srgb, var(--text) 60%, #6c757d 40%);
+	opacity: 0.7;
+}
 
 .btnPrimary {
 	color: var(--text);
@@ -50,8 +54,8 @@ body {
 }
 
 .counterButton {
-	width:75px;
-	height:25px;
+	width: 75px;
+	height: 25px;
 	color: black;
 	background-color: #5299c3;
 	border: none;
@@ -86,6 +90,35 @@ body {
 	width: 100px;
 	appearance: none;
 	/* Adjust the width as needed */
+}
+
+.keybindInputLabel {
+	color: var(--text);
+	background-color: #1a2026;
+	border: none;
+	font-size: 14px;
+	border-radius: 0px;
+}
+
+.keybindInput {
+	color: var(--text);
+	background-color: #2c333a;
+	border-color: #1a2026;
+	cursor: pointer;
+}
+
+.keybindInput:hover {
+	background-color: #273033;
+}
+
+.keybindInput:focus {
+	color: var(--text);
+	background-color: #273033;
+}
+
+.keybindInput::placeholder {
+	color: var(--text);
+	opacity: 1;
 }
 
 .vr {

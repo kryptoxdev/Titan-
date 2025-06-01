@@ -11,8 +11,10 @@ function handleEdit(input) {
 	});
 
 	input.addEventListener("blur", () => {
-		const key = input.id;
-		chrome.storage.sync.set({ [key]: input.value });
+		let trimmedValue = input.value.replace(/^0+(?!$)/, '');
+
+		input.value = trimmedValue || 0;
+		chrome.storage.sync.set({ [input.id]: input.value });
 	});
 }
 
@@ -28,12 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			currentCount.value = result[currentCount.id] || 0;
 			lastCount.value = result[lastCount.id] || 0;
 		});
-		
+
 		resetButton.addEventListener("click", () => {
 			chrome.storage.sync.set({ [currentCount.id]: 0, [lastCount.id]: currentCount.value });
 			location.reload();
 		});
-		
+
 		handleEdit(currentCount);
 		handleEdit(lastCount);
 	});

@@ -1,8 +1,20 @@
 if (window.location.href.endsWith('/test') && !window.location.href.includes('/image_upload/')) {
-	let processButton = document.querySelector("#process_button");
+	
+	function findProcessButton() {
+        const buttons = document.querySelectorAll('button');
+        for (const button of buttons) {
+            if (button.textContent.trim().toLowerCase().includes('process') && !button.disabled) {
+			};
+        }
+        return document.querySelector("#process_button");
+    }
 
+	let processButton = findProcessButton();
+	
 	processButton.addEventListener('click', (event) => {
-		let deviceIMEI = document.querySelector("#imei-checker > div.bg-white.overflow-hidden.sm\\:rounded-md.divide-y.divide-gray-200 > div > div > div.mt-4.shrink-0.sm\\:mt-0.sm\\:ml-5.w-1\\/2 > div > div > input").value;
+		let deviceIMEI = document.querySelector("#main_section > form > div.sm\\:rounded-lg.z-10.col-span-12.mb-5 > div > div > div > div > div > input").value;
+		
+		console.log("button clicked");
 
 		chrome.storage.sync.get(['deviceIMEIs', 'processCurrent'], (result) => {
 			let imeiList = result.deviceIMEIs || [];
